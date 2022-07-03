@@ -14,3 +14,9 @@ function randomWord() {
 }
 
 document.getElementById('amountOfLives').innerHTML = amountOfLives
+
+
+document.getElementById("myButton").onclick = function () {
+    let guessedLetters = document.getElementById("letterGuessed").value;
+    console.log(guessedLetters)
+}
