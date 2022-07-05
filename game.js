@@ -1,20 +1,14 @@
-let gameWords = [
+const word = document.getElementById('word')
+const wrongLetter =document.getElementById('wrongLetters')
+const gameWords = [
     "crazy",
     "party",
     "jokes"
 ]
-
-let answer = ''
-let amountOfLives = 5
-let howManyWrong = 0
-let guessedLetters = []
-
-function randomWord() {
-    answer =gameWords[Math.floor(Math.random) * gameWords.length]
-}
-
-document.getElementById('amountOfLives').innerHTML = amountOfLives
-
+let howManyWrong = document.getElementById('howManyWrong')
+let amountOfLives = document.getElementById('amountOfLives').innerHTML
+let answer =gameWords[Math.floor(Math.random() * gameWords.length)]
+ 
 
 document.getElementById("myButton").onclick = function () {
     let guessedLetters = document.getElementById("letterGuessed").value;

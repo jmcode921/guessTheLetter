@@ -10,8 +10,9 @@
 </head>
 <body>
     <h1>Hangman</h1>
-    <h2>BAD GUESS!! : <span id='howManyWrong'>0</span> of <span id='amountOfLives'></span></h2>
-    <h3 id="actualWord">where the word goes</h3>
+    <h2>BAD GUESS!! : <span id='howManyWrong'></span> of <span id='amountOfLives'></span></h2>
+    <div id="wrongLetters">Wrong Letters :<span id='wrongLetters'></span> </div>
+    <h3 class="word" id="word">where the word goes</h3>
     <div class="guessSection">
         <input type="text" id="letterGuessed" placeholder="Guess The Letter">
         <button type="button" id="myButton">Go!</button>
