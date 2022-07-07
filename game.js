@@ -6,36 +6,53 @@ const gameWords = [
     "party",
     "jokes"
 ]
-
 let answer =gameWords[Math.floor(Math.random() * gameWords.length)]
- 
+ console.log(answer)
 
 document.getElementById("myButton").onclick = function () {
-    let guessedLetters = document.getElementById("letterGuessed").value;
-    console.log(guessedLetters)
+    showUp()
 }
+
+let correctAr = []
+let wrongAr = []
 
 function showUp() {
     let val= document.getElementById("letterGuessed").value
-    if (document.getElementById(answer.value === "crazy")) {
-       if (val === "c"||val==="r"||val==="a"||val==="z"||val==="y"){
-        word.push("letterGuessed") 
+    
+    if (answer === "crazy") {
+        if (val === "c" || val === "r" || val === "a" || val === "z" || val === "y"){
+          word.innerText = word.innerText+" "+ val  
+            correctAr.push(val)
+            console.log(correctAr)     
        } else {
-        wrongLetter.push(guessedLetters)
+        wrongLetter.innerText= wrongLetter.innerText+" "+ val
+        wrongAr.push(val)
+        console.log(wrongAr)
        }
-    } else if (document.getElementById(answer.value === "party")) {
-        if (val==="p"||val==="a"||val==="r"||val==="t"||val==="y"){
-        word.push(guessedLetters)
-        }else {
-        wrongLetter.push(guessedLetters)
+    } else if (answer === "party") {
+        if (val === "p" || val === "a" || val === "r" || val === "t" || val === "y"){
+            word.innerText = word.innerText+" "+ val 
+            correctAr.push(val)
+            console.log(correctAr)
+        } else {
+            wrongLetter.innerText= wrongLetter.innerText+" "+ val
+            wrongAr.push(val)
+            console.log(wrongAr)
         }
-    } else if (document.getElementById(answer.value === "jokes")){
-        if (val=== "j"||val==="o"||val==="k"||val==="e"||val==="s"){
-        word.push(guessedLetters)
-        }else {
-        wrongLetter.push(guessedLetters)
+    } else if (answer === "jokes"){
+        if (val === "j" || val === "o" || val === "k" || val === "e" || val === "s"){
+            word.innerText = word.innerText+" "+ val 
+            correctAr.push(val)
+            console.log(correctAr)
+        } else {
+            wrongLetter.innerText= wrongLetter.innerText+" "+ val
+            wrongAr.push(val)
+            console.log(wrongAr)
     }
-
-    }
-
 }
+
+console.log(word,wrongLetter)
+}
+
+
+
