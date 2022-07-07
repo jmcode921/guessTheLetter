@@ -1,6 +1,7 @@
 let howManyWrong = document.getElementById('howManyWrong')
 const wrongLetter =document.getElementById('wrongLetters')
 const word = document.getElementById('word')
+const finalResult = document.getElementById('finalResult')
 const gameWords = [
     "crazy",
     "party",
@@ -49,10 +50,34 @@ function showUp() {
             wrongAr.push(val)
             console.log(wrongAr)
     }
+
 }
 
+winOrLose()
+countUp()
 console.log(word,wrongLetter)
 }
+
+
+
+function winOrLose() {
+    if(answer.length === correctAr.length) {
+      finalResult.innerHTML = `"You guessed the correct letters. The word is "${answer}". If you want again click START AGAIN!"`
+    }else if (wrongAr.length === 5) {
+        finalResult.innerHTML = "WRONG! You  have no more guesses left. START AGAIN "
+    }
+
+}
+
+function countUp() {
+    if (wrongAr.length){
+        let length = wrongAr.length
+        howManyWrong.innerHTML=length
+    }
+}
+
+
+
 
 
 
