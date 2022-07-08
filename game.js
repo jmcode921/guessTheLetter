@@ -35,18 +35,18 @@ let wrongAr = []
             correctAr.push(lCase)
             console.log(correctAr)
         } else {
-            wrongLetter.innerText= wrongLetter.innerText+" "+ val
-            wrongAr.push(val)
+            wrongLetter.innerText= wrongLetter.innerText+" "+ lCase
+            wrongAr.push(lCase)
             console.log(wrongAr)
         }
     } else if (answer === "jokes"){
         if (val === "j" || val === "o" || val === "k" || val === "e" || val === "s"){
-            word.innerText = word.innerText+" "+ val 
-            correctAr.push(val)
+            word.innerText = word.innerText+" "+ lCase 
+            correctAr.push(lCase)
             console.log(correctAr)
         } else {
-            wrongLetter.innerText= wrongLetter.innerText+" "+ val
-            wrongAr.push(val)
+            wrongLetter.innerText= wrongLetter.innerText+" "+ lCase
+            wrongAr.push(lCase)
             console.log(wrongAr)
     }
 
