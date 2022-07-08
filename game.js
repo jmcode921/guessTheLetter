@@ -40,7 +40,7 @@ let wrongAr = []
             console.log(wrongAr)
         }
     } else if (answer === "jokes"){
-        if (val === "j" || val === "o" || val === "k" || val === "e" || val === "s"){
+        if (lCase === "j" || lCase === "o" || lCase === "k" || lCase === "e" || lCase === "s"){
             word.innerText = word.innerText+" "+ lCase 
             correctAr.push(lCase)
             console.log(correctAr)
