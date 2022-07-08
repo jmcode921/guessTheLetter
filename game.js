@@ -12,28 +12,21 @@ let answer =gameWords[Math.floor(Math.random() * gameWords.length)]
 
 document.getElementById("myButton").onclick = function () {
     showUp()
-    resetInputType()
 }
-
-
 let correctAr = []
 let wrongAr = []
-
-function resetInputType() {
-        return document.getElementById("letterGuessed").value = " ";
-    }
-    
     function showUp() {
         let val= document.getElementById("letterGuessed").value
+        let lCase = val.toLowerCase()
         
     if (answer === "crazy") {
-        if (val === "c" || val === "r" || val === "a" || val === "z" || val === "y"){
-          word.innerText = word.innerText+" "+ val  
-            correctAr.push(val)
+        if (lCase === "c" || lCase === "r" || lCase === "a" || lCase === "z" || lCase === "y"){
+          word.innerText = word.innerText+" "+ lCase  
+            correctAr.push(lCase)
             console.log(correctAr)     
        } else {
-        wrongLetter.innerText= wrongLetter.innerText+" "+ val
-        wrongAr.push(val)
+        wrongLetter.innerText= wrongLetter.innerText+" "+ lCase
+        wrongAr.push(lCase)
         console.log(wrongAr)
        }
     } else if (answer === "party") {
@@ -67,9 +60,9 @@ console.log(word,wrongLetter)
 
 function winOrLose() {
     if(answer.length === correctAr.length) {
-      finalResult.innerHTML = `"You guessed the correct letters. The word is "${answer}". If you want to play again click START AGAIN!"`
+      finalResult.innerHTML = `You guessed the correct letters. The word is "${answer}". If you want to play again click START AGAIN!`
     }else if (wrongAr.length === 5) {
-        finalResult.innerHTML = "WRONG! You  have no more guesses left. START AGAIN "
+        finalResult.innerHTML = `WRONG! The correct word was "${answer}". You have no more guesses left. START AGAIN `
     }
 
 }
@@ -81,4 +74,10 @@ function countUp() {
     }
 }
 
+const buttonOne = document.getElementById('btn')
 
+const changeClass = () => {
+    document.body.classList.toggle('green')
+}
+
+buttonOne.addEventListener('click', changeClass)
