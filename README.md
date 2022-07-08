@@ -1,5 +1,5 @@
 # Guess The Letter
-## Date: 07/04/2022
+## Date: 07/01-08/2022
 ### By: Jesus Morales 
  [LinkedIn](https://www.linkedin.com/in/jesus-morales-98b0a41a4)|[GitHub](https://github.com/jmcode921)|[Trello](https://trello.com/b/JtBfBahe/project-1) 
  ***
