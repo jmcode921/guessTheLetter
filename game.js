@@ -30,9 +30,9 @@ let wrongAr = []
         console.log(wrongAr)
        }
     } else if (answer === "party") {
-        if (val === "p" || val === "a" || val === "r" || val === "t" || val === "y"){
-            word.innerText = word.innerText+" "+ val 
-            correctAr.push(val)
+        if (lCase === "p" || lCase === "a" || lCase === "r" || lCase === "t" || lCase === "y"){
+            word.innerText = word.innerText+" "+ lCase 
+            correctAr.push(lCase)
             console.log(correctAr)
         } else {
             wrongLetter.innerText= wrongLetter.innerText+" "+ val
