@@ -12,14 +12,20 @@ let answer =gameWords[Math.floor(Math.random() * gameWords.length)]
 
 document.getElementById("myButton").onclick = function () {
     showUp()
+    resetInputType()
 }
+
 
 let correctAr = []
 let wrongAr = []
 
-function showUp() {
-    let val= document.getElementById("letterGuessed").value
+function resetInputType() {
+        return document.getElementById("letterGuessed").value = " ";
+    }
     
+    function showUp() {
+        let val= document.getElementById("letterGuessed").value
+        
     if (answer === "crazy") {
         if (val === "c" || val === "r" || val === "a" || val === "z" || val === "y"){
           word.innerText = word.innerText+" "+ val  
@@ -52,7 +58,6 @@ function showUp() {
     }
 
 }
-
 winOrLose()
 countUp()
 console.log(word,wrongLetter)
@@ -62,7 +67,7 @@ console.log(word,wrongLetter)
 
 function winOrLose() {
     if(answer.length === correctAr.length) {
-      finalResult.innerHTML = `"You guessed the correct letters. The word is "${answer}". If you want again click START AGAIN!"`
+      finalResult.innerHTML = `"You guessed the correct letters. The word is "${answer}". If you want to play again click START AGAIN!"`
     }else if (wrongAr.length === 5) {
         finalResult.innerHTML = "WRONG! You  have no more guesses left. START AGAIN "
     }
@@ -75,9 +80,5 @@ function countUp() {
         howManyWrong.innerHTML=length
     }
 }
-
-
-
-
 
 
