@@ -7,6 +7,9 @@ const gameWords = [
     "party",
     "jokes"
 ]
+
+const buttonOne = document.getElementById('btn')
+
 let answer =gameWords[Math.floor(Math.random() * gameWords.length)]
  console.log(answer)
 
@@ -48,9 +51,9 @@ let wrongAr = []
             wrongLetter.innerText= wrongLetter.innerText+" "+ lCase
             wrongAr.push(lCase)
             console.log(wrongAr)
-    }
+        }
 
-}
+    }
 winOrLose()
 countUp()
 console.log(word,wrongLetter)
@@ -74,7 +77,6 @@ function countUp() {
     }
 }
 
-const buttonOne = document.getElementById('btn')
 
 const changeClass = () => {
     document.body.classList.toggle('green')
