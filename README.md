@@ -24,7 +24,9 @@
  #### A Trello board was used to keep track of development progress and can ve viewed [here](https://trello.com/b/JtBfBahe/project-1).
  ***
  ### *Screenshots* 
-![Image]
+![Image](https://i.imgur.com/k9geQVQ.png?1)
+
+![Image](https://i.imgur.com/iOYHpKZ.png?1)
   ### *Credits* 
 
   Markdown Cleansheet: [Github](https://github.com/jmcode921/u1_hw_markdown)
